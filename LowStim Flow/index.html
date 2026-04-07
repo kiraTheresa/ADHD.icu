@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LowStim Flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="top-bar">
+            <div id="mode-switch">
+                <button class="mode-btn active" data-mode="calm">Calm</button>
+                <button class="mode-btn" data-mode="focus">Focus</button>
+                <button class="mode-btn" data-mode="scroll">Scroll</button>
+                <button class="mode-btn" data-mode="sleep">Sleep</button>
+            </div>
+            
+            <div id="stimulus-control">
+                <div class="control-group">
+                    <label>Stimulus</label>
+                    <input type="range" id="stimulus-slider" min="0" max="100" value="30">
+                </div>
+                <div class="control-group">
+                    <label>Contrast</label>
+                    <input type="range" id="contrast-slider" min="0" max="100" value="20">
+                </div>
+                <div class="control-group">
+                    <label>Complexity</label>
+                    <input type="range" id="complexity-slider" min="0" max="100" value="10">
+                </div>
+            </div>
+            
+            <div id="session-control">
+                <button class="session-btn" data-duration="180">3 min</button>
+                <button class="session-btn" data-duration="300">5 min</button>
+                <button class="session-btn" data-duration="600">10 min</button>
+                <span id="session-timer"></span>
+            </div>
+            
+            <button id="settings-btn">⚙️</button>
+        </div>
+        
+        <div id="main-flow"></div>
+        
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Settings</h2>
+                <div class="setting-item">
+                    <label>Default Mode</label>
+                    <select id="default-mode">
+                        <option value="calm">Calm</option>
+                        <option value="focus">Focus</option>
+                        <option value="scroll">Scroll</option>
+                        <option value="sleep">Sleep</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label>Default Duration</label>
+                    <select id="default-duration">
+                        <option value="180">3 min</option>
+                        <option value="300">5 min</option>
+                        <option value="600">10 min</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label>Animation (Low Performance)</label>
+                    <input type="checkbox" id="low-performance">
+                </div>
+                <button id="close-settings">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="script/main.js"></script>
+</body>
+</html>
