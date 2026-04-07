@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>低认知负担视觉扫描</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="control-panel">
+        <div class="control-item">
+            <label for="stimulus-slider">刺激强度</label>
+            <input type="range" id="stimulus-slider" min="0" max="100" value="50">
+            <span id="stimulus-value">50</span>
+        </div>
+        <button id="minimal-mode" class="minimal-btn">极简模式</button>
+    </div>
+
+    <div class="container">
+        <div class="column" id="column-left"></div>
+        <div class="column" id="column-right"></div>
+    </div>
+
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
